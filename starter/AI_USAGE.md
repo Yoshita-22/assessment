@@ -42,11 +42,24 @@ Using a database primary key or unique constraint on `event_id` ensures that onl
 
 This helped me understand the importance of database constraints when handling concurrent requests.
 
-## **5\. AI-Generated Content That I Had to Debug**
+## 5. AI-Generated Content That I Had to Debug
 
-At the time of writing this disclosure, I have primarily used AI for understanding, planning, and documentation. I have not yet relied on AI-generated implementation code that required debugging.
+I used AI assistance to generate and understand parts of the initial implementation. The generated code was treated as a starting point rather than a final solution.
 
-If I use AI-generated code during implementation, I will update this section with the relevant details and explain what I tested, changed, or debugged myself.
+The AI-assisted implementation included:
+
+- HTTP handlers for `POST /events` and `GET /campaigns/{campaign_id}/stats`.
+- Event validation and batch processing logic.
+- SQLite database operations and duplicate event handling.
+- JSON request and response structures.
+- Error handling for invalid events and database operations.
+
+I reviewed the generated code and worked on understanding how each component functions, including database transactions, unique constraints, HTTP handlers, and event processing.
+
+I am responsible for verifying the final implementation. I will run the application, test valid and invalid requests, check duplicate handling, verify campaign statistics, and fix any issues identified during testing.
+
+AI assistance was used as a learning and development aid, and I will ensure that I can explain the implementation and the design decisions independently.
+
 
 ## **6\. Verification and Responsibility**
 
