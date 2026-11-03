@@ -223,6 +223,20 @@ These tests protect the behaviours most likely to cause serious problems:
 
 I will prioritize these correctness tests over tests that only verify trivial implementation details.
 
+
+### What I completed
+- Implemented the POST /events endpoint for batch event ingestion.
+- Implemented per-event validation and error handling.
+- Added duplicate event detection using event_id.
+- Added SQLite persistence for incoming events.
+- Implemented GET /campaigns/{campaign_id}/stats to retrieve campaign statistics.
+- Handled duplicate, invalid, mixed-batch, and out-of-order events.
+
+### What I intentionally skipped
+- Did not implement the optional GET /campaigns/{campaign_id}/events endpoint for paginated event retrieval.
+- Kept the implementation focused on the core requirements within the available time.
+  
+
 # **Scale Memo**
 
 ## **Scenario: Growth from a few thousand to 100 million events per day**
